@@ -17,7 +17,6 @@ from core.validator import ValidationError, validate_structure
 
 BASE_DIR = Path(__file__).parent
 CONFIG_DIR = BASE_DIR / "config"
-OUTPUTS_DIR = BASE_DIR / "outputs"
 
 st.set_page_config(page_title="LeadNormalizer", layout="wide")
 

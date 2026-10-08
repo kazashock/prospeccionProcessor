@@ -1,1 +1,14 @@
 dist/*.zip filter=lfs diff=lfs merge=lfs -text
+build/**/*.pyd filter=lfs diff=lfs merge=lfs -text
+build/**/*.dll filter=lfs diff=lfs merge=lfs -text
+build/**/*.exe filter=lfs diff=lfs merge=lfs -text
+build/**/*.lib filter=lfs diff=lfs merge=lfs -text
+build/**/*.zip filter=lfs diff=lfs merge=lfs -text
+build/**/*.so filter=lfs diff=lfs merge=lfs -text
+build/**/*.gz filter=lfs diff=lfs merge=lfs -text
+build/**/*.woff2 filter=lfs diff=lfs merge=lfs -text
+build/**/*.npy filter=lfs diff=lfs merge=lfs -text
+build/**/*.parquet filter=lfs diff=lfs merge=lfs -text
+build/**/*.png filter=lfs diff=lfs merge=lfs -text
+build/**/*.map filter=lfs diff=lfs merge=lfs -text
+build/**/*.js filter=lfs diff=lfs merge=lfs -text

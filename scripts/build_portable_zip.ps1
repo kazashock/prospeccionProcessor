@@ -44,6 +44,15 @@ import site
 Write-Host "Instalando dependencias..."
 & "$RUNTIME_DIR\python.exe" -m pip install --no-warn-script-location -r (Join-Path $ROOT "requirements.txt")
 
+# Recortar peso: cache de bytecode y carpetas de tests de las dependencias
+Write-Host "Optimizando tamano del runtime..."
+$sitePackages = Join-Path $RUNTIME_DIR "Lib\site-packages"
+Get-ChildItem -Path $sitePackages -Recurse -Directory -Filter "__pycache__" -ErrorAction SilentlyContinue |
+    ForEach-Object { Remove-Item -Recurse -Force $_.FullName -ErrorAction SilentlyContinue }
+Get-ChildItem -Path $sitePackages -Recurse -Directory -ErrorAction SilentlyContinue |
+    Where-Object { $_.Name -in @("tests", "test") } |
+    ForEach-Object { if (Test-Path $_.FullName) { Remove-Item -Recurse -Force $_.FullName -ErrorAction SilentlyContinue } }
+
 # 3. Staging: copiar codigo fuente (sin entornos de desarrollo ni cache)
 if (Test-Path $STAGING_DIR) { Remove-Item -Recurse -Force $STAGING_DIR }
 New-Item -ItemType Directory -Force -Path $STAGING_DIR | Out-Null
@@ -76,4 +85,8 @@ if (Test-Path $ZIP_PATH) { Remove-Item -Force $ZIP_PATH }
 Compress-Archive -Path (Join-Path $STAGING_DIR "*") -DestinationPath $ZIP_PATH -CompressionLevel Optimal
 
 $tamanoMB = [math]::Round((Get-Item $ZIP_PATH).Length / 1MB, 1)
+
+# 7. staging es descartable (duplica build/python + el codigo ya empaquetado)
+Remove-Item -Recurse -Force $STAGING_DIR
+
 Write-Host "Listo: $ZIP_PATH ($tamanoMB MB)"
