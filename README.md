@@ -18,12 +18,18 @@ La solución debe ser escalable, mantenible y compatible con el ecosistema Micro
 
 ## Instalación y Uso
 
+> **Importante:** este repositorio usa **Git LFS** para `dist/` y `build/` (son binarios grandes: el zip portable y el runtime de Python embebido). Para que esos archivos lleguen con su contenido real, hay que obtener el repo con `git clone` (no con el botón **"Code → Download ZIP"** de GitHub) y tener [Git LFS](https://git-lfs.com/) instalado (`git lfs install`, una sola vez por máquina). Descargar el ZIP de GitHub deja esos archivos como punteros de texto de ~100 bytes, no utilizables.
+>
+> ```
+> git clone https://github.com/kazashock/prospeccionProcessor.git
+> ```
+
 Hay dos formas de usar LeadNormalizer, según quién la use:
 
 ### Opción A — Usuario final (no requiere instalar Python)
 
-1. Descargar `dist/LeadNormalizer_Portable.zip` (incluye un Python embebido con todas las dependencias ya instaladas).
-2. Descomprimirlo en cualquier carpeta.
+1. Clonar el repositorio con `git clone` (ver advertencia arriba) — no descargar el ZIP de GitHub.
+2. Ir a `dist/LeadNormalizer_Portable.zip` (incluye un Python embebido con todas las dependencias ya instaladas) y descomprimirlo en cualquier carpeta.
 3. Doble clic en `LeadNormalizer.bat`.
 
 Abre una ventana de escritorio propia (no una pestaña de navegador) con la app lista para usar. No necesita conexión a internet ni instalar nada adicional.
