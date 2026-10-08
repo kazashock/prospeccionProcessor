@@ -20,7 +20,7 @@ La solución debe ser escalable, mantenible y compatible con el ecosistema Micro
 
 > **Importante:** este repositorio usa **Git LFS** para `dist/` y `build/` (son binarios grandes: el zip portable y el runtime de Python embebido). Para que esos archivos lleguen con su contenido real, hay que obtener el repo con `git clone` (no con el botón **"Code → Download ZIP"** de GitHub) y tener [Git LFS](https://git-lfs.com/) instalado (`git lfs install`, una sola vez por máquina). Descargar el ZIP de GitHub deja esos archivos como punteros de texto de ~100 bytes, no utilizables.
 >
-> ```
+> ```sh
 > git clone https://github.com/kazashock/prospeccionProcessor.git
 > ```
 
