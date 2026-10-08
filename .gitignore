@@ -7,4 +7,3 @@ outputs/*.xlsx
 data/sample/*.xlsx
 .streamlit/secrets.toml
 /build/
-/dist/
