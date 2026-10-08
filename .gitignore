@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+outputs/*.xlsx
+data/sample/*.xlsx
+.streamlit/secrets.toml
+/build/
+/dist/

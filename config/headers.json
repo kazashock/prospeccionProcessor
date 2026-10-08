@@ -1,0 +1,40 @@
+{
+  "NUMERO_DOCUMENTO": [
+    "numero documento",
+    "numerodocumento",
+    "nro documento",
+    "nro_documento",
+    "num documento",
+    "documento",
+    "dni",
+    "cuil",
+    "cuit",
+    "nro doc",
+    "n documento",
+    "identificacion",
+    "nro identificacion"
+  ],
+  "EMAIL": [
+    "email",
+    "e-mail",
+    "e mail",
+    "mail",
+    "correo",
+    "correo electronico",
+    "direccion de correo"
+  ],
+  "NOMBRE": [
+    "nombre",
+    "nombres",
+    "first name",
+    "firstname",
+    "primer nombre"
+  ],
+  "APELLIDO": [
+    "apellido",
+    "apellidos",
+    "last name",
+    "lastname",
+    "primer apellido"
+  ]
+}

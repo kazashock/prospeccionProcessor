@@ -1,0 +1,11 @@
+{
+  "required_columns": ["NUMERO_DOCUMENTO", "EMAIL", "NOMBRE", "APELLIDO"],
+  "crm_match_keys": ["NUMERO_DOCUMENTO"],
+  "duplicate_file_keys": ["NUMERO_DOCUMENTO"],
+  "discard_priority": [
+    "SIN_DOCUMENTO",
+    "SIN_EMAIL",
+    "DUPLICADO_ARCHIVO",
+    "DUPLICADO_CRM"
+  ]
+}
